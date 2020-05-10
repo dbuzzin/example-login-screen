@@ -1,0 +1,65 @@
+.btn-wrapper {
+    display: flex;
+
+    & > :first-child {
+        margin-right: 2rem;
+    }
+}
+
+.btn {
+    font-weight: 200;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &__primary {
+        padding: 1.8rem 4rem;
+        border-radius: 1rem;
+        box-shadow: 0 1px rgba(0, 0, 0, 0.02);
+    }
+
+    &__text {
+
+        &--medium {
+            font-size: 1.3rem;
+        }
+
+        &--large {
+            font-size: 1.7rem;
+        }
+    }
+    &__title {
+        margin-left: 1rem;
+    }
+}
+
+@include respond(phone-sm) {
+    .btn-wrapper {
+        justify-content: initial;
+        flex-direction: column;
+
+        & > :first-child {
+            margin-right: 0;
+        }
+    }
+
+    .btn {
+        margin-bottom: 2rem;
+    }
+}
+
+@include respond(tab-land) {
+    .btn-wrapper {
+        justify-content: space-between;
+
+        & > :first-child {
+            margin-right: 0;
+        }
+    }
+}
+
