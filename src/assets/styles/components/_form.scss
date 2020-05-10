@@ -1,6 +1,6 @@
 .form {
-    font-size: 1.5rem;
-    font-weight: 200;
+    font-size: 1.6rem;
+    font-weight: 300;
     color: var(--color-dark-grey);
     letter-spacing: -.4px;
 
@@ -19,7 +19,7 @@
         margin-top: 1rem;
         margin-bottom: 2rem;
         padding: 1.5rem;
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         border: 1px solid var(--color-light-grey2); 
         border-radius: 0.8rem;
         transition: background-color 0.2s;
@@ -31,9 +31,9 @@
 
     &__checkbox {
         display: flex;
-        padding-top: 4px;
+        padding-top: 3px;
         padding-left: 3.2rem;
-        font-size: 1.35rem;
+        font-size: 1.4rem;
         user-select: none;
         cursor: pointer;
 
