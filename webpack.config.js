@@ -10,7 +10,8 @@ module.exports = {
     resolve: {
         extensions: [".js", ".jsx"],
         alias: {
-            app: path.resolve(__dirname, "./src")
+            fonts: path.resolve(__dirname, "src/assets/fonts/"),
+            images: path.resolve(__dirname, "src/assets/images/")
         }
     },
     module: {
@@ -40,16 +41,14 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(woff(2)?|ttf|otf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-                use: [
-                    {
-                        loader: "file-loader",
-                        options: {
-                            name: "[name].[ext]",
-                            outputPath: "fonts/"
-                        }
+                test: /\.(woff(2)?|ttf|eot|otf)(\?v=\d+\.\d+\.\d+)?$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
                     }
-                ]
+                }
             },
             {
                 test: /\.(jpg|png|svg)$/,
